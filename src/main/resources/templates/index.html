@@ -68,14 +68,14 @@
     </div>    
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
+  <!-- ======= Alex Section ======= -->
   
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">    
       <h1>Hola! soy Alex</h1>
       <p><span class="typed" data-typed-items="Desarrollador Backend, Freelancer, Cinéfilo"></span></p>
     </div>
-  </section><!-- End Hero -->
+  </section><!-- Alex Section -->
 
   <main id="main">
 
@@ -106,8 +106,8 @@
 
           <div class="col" data-aos="fade-up">
 
-            <div class="position-relative top-50 start-50 translate-middle">
-            	<img src="assets/img/portfolio/logos.png" alt="" width="800">
+          <div>
+            	<img src="assets/img/portfolio/logos.png" alt="tecnologias" width="50%">
        		</div>
 
           </div>
@@ -222,11 +222,13 @@
         </div>
 		<div class="row p-3 ">
 			<div class="card p-3 mx-2" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
+			  <img src="assets/img/portafolio-img.jpg" class="card-img-top" alt="...">
 			  <div class="card-body">
-			    <h5 class="card-title">Card title</h5>
-			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			    <a href="#" class="btn btn-primary">Ver proyecto en GitHub</a>
+			    <h5 class="card-title">Mi Portafolio</h5>
+			    <p class="card-text">Construí mi propio portafolio para mostrar mis proyectos al mundo , fue desarrollado usando
+           <b>Java con Spring Boot en el backend</b>, la interfaz gráfica está hecha con <b>Thymeleaf, Bootstrap y HTML</b>.
+          </p>
+			    <a href="#" class="btn btn-dark">Ver proyecto en GitHub</a>
 			  </div>
 			</div>
 			
@@ -235,7 +237,7 @@
 			  <div class="card-body">
 			    <h5 class="card-title">Card title</h5>
 			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			    <a href="#" class="btn btn-primary">Ver proyecto en GitHub</a>
+			    <a href="#" class="btn btn-dark">Ver proyecto en GitHub</a>
 			  </div>
 			</div>
 			
@@ -244,7 +246,7 @@
 			  <div class="card-body">
 			    <h5 class="card-title">Card title</h5>
 			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			    <a href="#" class="btn btn-primary">Ver proyecto en GitHub</a>
+			    <a href="#" class="btn btn-dark">Ver proyecto en GitHub</a>
 			  </div>
 			</div>
 		</div>
@@ -261,13 +263,13 @@
           <h2>Contáctame</h2>
           <p>Hablamos? No dudes en realizar tus inquitudes ! 📞😊 </p>
         </div>        
-		<div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${exito != null}" th:text="${exito}"></div>
+		    <div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${exito != null}" th:text="${exito}"></div>
         <div class="alert alert-danger" th:if="${error != null}">
 	        <div th:if="${error.containsKey('nombre')}"  th:text="${error.nombre}"></div>      	
 	        <div th:if="${error.containsKey('email')}"  th:text="${error.email}"></div>         
 	        <div th:if="${error.containsKey('asunto')}"  th:text="${error.asunto}"></div> 
 	    </div>    
-        <div class="row" data-aos="fade-in">
+      <div class="row" data-aos="fade-in">
 
           <div class="col d-flex align-items-stretch">
             <div class="info mx-3">
@@ -288,22 +290,22 @@
                 <i class="bi bi-phone"></i>
                 <h4>Teléfono:</h4>
                 <p>+57 319 376 85 34</p>              
-			</div>
+			        </div>
           </div>
 
-           <div class="col-lg-6 mt-3 mt-lg-0 d-flex align-items-stretch">
+           <div class="card p-3 mx-2" style="width: 40rem;">
             <form th:action="@{contact}" method="post" th:object="${visitor}">
               <div class="row">
                 
                 <div class="form-group col-md-6">
-                  <label for="nombre">Tu Nombre</label>                  
+                  <label for="nombre"><b>Tu Nombre</b></label>                  
               	  <div>
               	  	<input type="text" id="nombre" class="form-control" th:field="*{nombre}">
               	  </div>              	           
                 </div>
                 
                 <div class="form-group col-md-6">
-                  <label for="email">Tu Email</label>
+                  <label for="email"><b>Tu Email</b></label>
                   <div>
                   	<input type="text" id="email" class="form-control" th:field="*{email}">
                   </div>
@@ -313,7 +315,7 @@
               </div>
               
               <div class="form-group">
-                <label for="asunto">Asunto</label>
+                <label for="asunto"><b>Asunto</b></label>
                 <div>
                 	<input type="text" id="asunto" class="form-control" th:field="*{asunto}">
                 </div>
@@ -321,11 +323,11 @@
               </div>
               
               <div class="form-group">
-                <label for="body">Mensaje</label>
+                <label for="body"><b>Mensaje</b></label>
                 <textarea class="form-control" rows="10" id="body"  th:field="*{body}"></textarea>
               </div>
               
-              <div class="text-center">
+              <div class="text-center p-3">
               	<input type="submit" value="Enviar mensaje" class="btn btn-primary"></input>
               </div>
             </form>
