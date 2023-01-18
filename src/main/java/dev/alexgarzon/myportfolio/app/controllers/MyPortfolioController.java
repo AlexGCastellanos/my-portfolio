@@ -49,7 +49,10 @@ public class MyPortfolioController {
 		message.setTo("briangarzon94@gmail.com");
 		message.setCc(visitor.getEmail());
 		message.setSubject(visitor.getAsunto());
-		message.setText(visitor.getNombre() + " ha realizado la siguiente consulta:\n" + visitor.getBody());
+		message.setText(visitor.getNombre()
+						.concat(" ha realizado la siguiente consulta:\n\n")
+						.concat(visitor.getBody())
+						);
 		
 		javaMailSender.send(message);
 		System.out.println("El mensaje se ha enviado ");
