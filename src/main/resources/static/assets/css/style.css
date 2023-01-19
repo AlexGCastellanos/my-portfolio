@@ -229,8 +229,8 @@ h6 {
   width: 100%;
   height: 100vh;
   background: url("../img/alexbg1.jpg") top center;
-  background-size: cover;
-  background-position: right;
+  background-size: auto;
+  background-position: 40%;
 }
 
 #hero:before {

@@ -50,7 +50,7 @@ public class MyPortfolioController {
 		message.setCc(visitor.getEmail());
 		message.setSubject(visitor.getAsunto());
 		message.setText(visitor.getNombre()
-						.concat(" ha realizado la siguiente consulta:\n\n")
+						.concat(" ha realizado la siguiente consulta:\n"+"\n"+"\n")
 						.concat(visitor.getBody())
 						);
 		
